@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vista Zone - Terbaik, Termurah, Terpercaya</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --primary: #0f172a;
+    --accent: #e11d48;
+    --accent2: #f59e0b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --success: #10b981;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+  button { cursor: pointer; font-family: inherit; border: none; }
+
+  /* ===== TOP BAR ===== */
+  .topbar {
+    background: linear-gradient(90deg, #0f172a, #1e293b);
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 0;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+  .topbar i { color: var(--accent2); margin-right: 6px; }
+
+  /* ===== HEADER ===== */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  }
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .dot { color: var(--accent); }
+  .logo span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .slogan {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+    margin-top: -4px;
+  }
+  nav {
+    display: flex;
+    gap: 6px;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+    transition: all 0.25s;
+  }
+  nav a:hover, nav a.active {
+    background: var(--primary);
+    color: #fff;
+  }
+  .header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .icon-btn {
+    position: relative;
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+    color: var(--primary);
+    transition: all 0.25s;
+  }
+  .icon-btn:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
+  .badge {
+    position: absolute;
+    top: -4px; right: -4px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 18px; height: 18px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    padding: 0 4px;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #be123c);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(225,29,72,0.35); }
+  .btn-wa {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s;
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37,211,102,0.35); }
+
+  /* ===== HERO ===== */
+  .hero {
+    max-width: 1280px;
+    margin: 28px auto;
+    padding: 0 20px;
+  }
+  .hero-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    border-radius: 28px;
+    padding: 50px 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(225,29,72,0.35), transparent 70%);
+    top: -150px; right: -100px;
+    border-radius: 50%;
+  }
+  .hero-card::after {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(245,158,11,0.25), transparent 70%);
+    bottom: -120px; left: -80px;
+    border-radius: 50%;
+  }
+  .hero-text { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .hero-badge i { color: var(--accent2); }
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 14px;
+  }
+  .hero h1 span { background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p { color: #cbd5e1; font-size: 15px; margin-bottom: 26px; max-width: 480px; }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-visual {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .phone-mock {
+    width: 220px;
+    height: 440px;
+    background: linear-gradient(160deg, #1e293b, #0f172a);
+    border-radius: 36px;
+    border: 8px solid #334155;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    transform: rotate(-6deg);
+    transition: transform 0.4s;
+  }
+  .phone-mock:hover { transform: rotate(0deg) scale(1.03); }
+  .phone-mock .screen-logo { font-size: 40px; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .phone-mock .screen-slogan { font-size: 11px; color: #94a3b8; letter-spacing: 1px; text-transform: uppercase; }
+  .phone-mock .notch {
+    position: absolute;
+    top: 14px;
+    width: 80px; height: 20px;
+    background: #0f172a;
+    border-radius: 12px;
+  }
+
+  /* ===== SECTION ===== */
+  section { max-width: 1280px; margin: 50px auto; padding: 0 20px; }
+  .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; gap: 16px; flex-wrap: wrap; }
+  .section-head h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.8px; }
+  .section-head h2 span { color: var(--accent); }
+  .section-head p { color: var(--muted); font-size: 14px; }
+
+  /* ===== FILTER BAR ===== */
+  .filter-bar {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+    margin-bottom: 26px;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr) auto;
+    gap: 12px;
+    align-items: end;
+  }
+  .search-wrap { position: relative; }
+  .search-wrap input {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.25s;
+  }
+  .search-wrap input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(225,29,72,0.1); }
+  .search-wrap i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+  .suggestions {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0; right: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-hover);
+    border: 1px solid var(--border);
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 50;
+    display: none;
+  }
+  .suggestions.show { display: block; }
+  .suggestions div {
+    padding: 10px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .suggestions div:hover { background: #f8fafc; }
+  .suggestions div i { color: var(--accent); font-size: 12px; }
+  .filter-group label { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px; }
+  .filter-group select, .filter-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    background: #fff;
+  }
+  .filter-group select:focus, .filter-group input:focus { border-color: var(--accent); }
+  .btn-filter {
+    background: var(--primary);
+    color: #fff;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s;
+  }
+  .btn-filter:hover { background: var(--accent); }
+
+  /* ===== PRODUCT GRID ===== */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .product-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid var(--border);
+  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+  .product-img {
+    height: 200px;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-img i { font-size: 64px; color: #94a3b8; transition: transform 0.4s; }
+  .product-card:hover .product-img i { transform: scale(1.15); }
+  .product-tag {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .product-tag.flash { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+  .product-tag.seken { background: #6366f1; }
+  .wish-btn {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    color: var(--muted);
+    transition: all 0.25s;
+  }
+  .wish-btn:hover, .wish-btn.active { color: var(--accent); background: #fff; }
+  .product-body { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .product-brand { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+  .product-name { font-size: 15px; font-weight: 700; line-height: 1.3; }
+  .product-desc { font-size: 12px; color: var(--muted); line-height: 1.5; flex: 1; }
+  .product-price { font-size: 17px; font-weight: 800; color: var(--primary); margin-top: 4px; }
+  .product-price small { font-size: 11px; color: var(--muted); font-weight: 400; text-decoration: line-through; margin-left: 6px; }
+  .product-actions { display: flex; gap: 8px; margin-top: 10px; }
+  .btn-detail {
+    flex: 1;
+    background: var(--primary);
+    color: #fff;
+    padding: 9px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .btn-detail:hover { background: var(--accent); }
+  .btn-icon-wa {
+    width: 38px;
+    border-radius: 10px;
+    background: #25d366;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    transition: all 0.25s;
+  }
+  .btn-icon-wa:hover { background: #128c7e; transform: scale(1.05); }
+
+  /* ===== PROMO BANNER ===== */
+  .promo-banner {
+    background: linear-gradient(135deg, #e11d48, #be123c 50%, #881337);
+    border-radius: 24px;
+    padding: 36px 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+  }
+  .promo-banner::before {
+    content: 'FLASH SALE';
+    position: absolute;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.06);
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    letter-spacing: -5px;
+  }
+  .promo-banner h3 { font-size: 26px; font-weight: 800; margin-bottom: 6px; }
+  .promo-banner p { color: #fecdd3; font-size: 14px; }
+  .countdown { display: flex; gap: 10px; margin-top: 16px; }
+  .cd-box {
+    background: rgba(0,0,0,0.25);
+    border-radius: 12px;
+    padding: 10px 16px;
+    text-align: center;
+    min-width: 64px;
+  }
+  .cd-box b { font-size: 22px; font-weight: 800; display: block; }
+  .cd-box span { font-size: 10px; text-transform: uppercase; color: #fecdd3; }
+
+  /* ===== SEKEN SECTION ===== */
+  .seken-panel {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+  }
+  .seken-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .seken-form .full { grid-column: 1 / -1; }
+  .seken-form label { font-size: 12px; font-weight: 600; color: var(--muted); display: block; margin-bottom: 4px; }
+  .seken-form input, .seken-form textarea, .seken-form select {
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    background: #fff;
+  }
+  .seken-form textarea { resize: vertical; min-height: 80px; }
+  .seken-form input:focus, .seken-form textarea:focus, .seken-form select:focus { border-color: var(--accent); }
+  .seken-form .btn-primary { grid-column: 1 / -1; justify-content: center; padding: 12px; }
+
+  .seken-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .seken-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .seken-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+  .seken-media {
+    height: 180px;
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .seken-media i { font-size: 48px; color: #6366f1; }
+  .seken-media .video-badge {
+    position: absolute;
+    bottom: 10px; right: 10px;
+    background: rgba(15,23,42,0.85);
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .seken-body { padding: 16px; }
+  .seken-body h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .seken-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .chip { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 20px; background: #f1f5f9; color: var(--muted); }
+  .chip.ok { background: #dcfce7; color: #15803d; }
+  .chip.warn { background: #fef3c7; color: #b45309; }
+  .seken-price { font-size: 17px; font-weight: 800; color: var(--accent); margin: 8px 0; }
+  .seken-desc { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+
+  /* ===== ACCOUNT / TRANSACTION ===== */
+  .account-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .account-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .account-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .account-card h4 i { color: var(--accent); }
+  .account-card p { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .account-card .btn-primary { width: 100%; justify-content: center; }
+  .cart-item { display: flex; justify-content: space-between; font-size: 13px; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .cart-item:last-child { border-bottom: none; }
+  .cart-total { display: flex; justify-content: space-between; font-weight: 700; margin-top: 10px; padding-top: 10px; border-top: 2px solid var(--border); }
+  .loyalty { display: flex; align-items: center; gap: 10px; background: #fffbeb; border-radius: 12px; padding: 12px; margin-top: 10px; }
+  .loyalty i { color: var(--accent2); font-size: 24px; }
+  .loyalty b { font-size: 18px; color: var(--primary); }
+
+  /* ===== CONTACT ===== */
+  .contact-wrap {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border-radius: 24px;
+    padding: 40px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  .contact-wrap h2 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+  .contact-wrap p { color: #cbd5e1; font-size: 14px; margin-bottom: 20px; }
+  .contact-info { display: flex; flex-direction: column; gap: 12px; }
+  .contact-info div { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+  .contact-info i { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.1); display: grid; place-items: center; color: var(--accent2); }
+  .contact-cta { display: flex; flex-direction: column; gap: 12px; }
+  .contact-cta .btn-wa { justify-content: center; padding: 14px; font-size: 15px; }
+
+  /* ===== MODAL ===== */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15,23,42,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: #fff;
+    border-radius: 22px;
+    max-width: 780px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: pop 0.3s ease;
+  }
+  @keyframes pop { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .modal-close {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    z-index: 5;
+  }
+  .modal-close:hover { background: var(--accent); color: #fff; }
+  .modal-grid { display: grid; grid-template-columns: 1fr 1.1fr; }
+  .modal-visual {
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    display: grid;
+    place-items: center;
+    min-height: 300px;
+    border-radius: 22px 0 0 22px;
+  }
+  .modal-visual i { font-size: 110px; color: #94a3b8; }
+  .modal-body { padding: 30px; }
+  .modal-body h3 { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+  .modal-body .brand { font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+  .modal-body .price { font-size: 26px; font-weight: 800; color: var(--primary); margin: 12px 0; }
+  .spec-list { display: flex; flex-direction: column; gap: 6px; margin: 14px 0; }
+  .spec-list div { display: flex; justify-content: space-between; font-size: 13px; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .spec-list span:first-child { color: var(--muted); }
+  .spec-list span:last-child { font-weight: 600; }
+  .modal-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 18px; }
+  .modal-actions { display: flex; gap: 10px; }
+  .modal-actions .btn-wa { flex: 1; justify-content: center; }
+
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.35s;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .toast i { color: var(--success); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--primary);
+    color: #cbd5e1;
+    margin-top: 60px;
+    padding: 50px 20px 20px;
+  }
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .footer-inner h5 { color: #fff; font-size: 15px; margin-bottom: 14px; }
+  .footer-inner a { display: block; font-size: 13px; padding: 5px 0; color: #94a3b8; transition: color 0.2s; }
+  .footer-inner a:hover { color: var(--accent2); }
+  .footer-brand p { font-size: 13px; color: #94a3b8; margin-top: 10px; max-width: 300px; }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .filter-bar { grid-template-columns: 1fr 1fr 1fr; }
+    .hero-card { grid-template-columns: 1fr; padding: 36px 28px; }
+    .hero-visual { display: none; }
+    .hero h1 { font-size: 32px; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .modal-grid { grid-template-columns: 1fr; }
+    .modal-visual { border-radius: 22px 22px 0 0; min-height: 200px; }
+  }
+  @media (max-width: 720px) {
+    .header-inner { gap: 10px; }
+    nav { order: 3; width: 100%; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+    nav a { white-space: nowrap; font-size: 13px; padding: 7px 12px; }
+    .filter-bar { grid-template-columns: 1fr 1fr; }
+    .filter-bar .search-wrap { grid-column: 1 / -1; }
+    .btn-filter { grid-column: 1 / -1; justify-content: center; }
+    .seken-form { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 26px; }
+    .promo-banner { padding: 24px; }
+    .promo-banner h3 { font-size: 20px; }
+    .countdown { flex-wrap: wrap; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .account-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+    .product-img { height: 150px; }
+    .product-img i { font-size: 44px; }
+    .product-name { font-size: 13px; }
+    .product-price { font-size: 14px; }
+    .section-head h2 { font-size: 22px; }
+  }
+  @media (max-width: 420px) {
+    .product-grid { grid-template-columns: 1fr 1fr; }
+    .header-actions .btn-primary span { display: none; }
+    .header-actions .btn-primary { padding: 10px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <i class="fas fa-truck-fast"></i> Gratis Ongkir Seluruh Indonesia &nbsp;|&nbsp;
+  <i class="fas fa-shield-halved"></i> Garansi Resmi &nbsp;|&nbsp;
+  <i class="fas fa-star"></i> Terbaik • Termurah • Terpercaya
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="logo">VISTA<span class="dot">.</span><span>ZONE</span></div>
+      <div class="slogan">Terbaik • Termurah • Terpercaya</div>
+    </div>
+    <nav id="mainNav">
+      <a href="#beranda" class="active">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#seken">Smartphone Seken</a>
+      <a href="#promo">Promo</a>
+      <a href="#akun">Akun</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" title="Wishlist" onclick="showToast('Wishlist dibuka')"><i class="fas fa-heart"></i><span class="badge" id="wishBadge">0</span></button>
+      <button class="icon-btn" title="Keranjang" onclick="showToast('Keranjang belanja')"><i class="fas fa-shopping-cart"></i><span class="badge" id="cartBadge">0</span></button>
+      <button class="icon-btn" title="Akun Saya" onclick="scrollToAkun()"><i class="fas fa-user"></i></button>
+      <a href="https://wa.me/6285267777779" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> <span>Hubungi Kami</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO / BERANDA -->
+<div class="hero" id="beranda">
+  <div class="hero-card">
+    <div class="hero-text">
+      <div class="hero-badge"><i class="fas fa-bolt"></i> Promo Spesial Hari Ini</div>
+      <h1>Smartphone Impian,<br><span>Harga Terbaik.</span></h1>
+      <p>Vista Zone menghadirkan smartphone terbaru & flagship dari brand terkemuka, asesoris lengkap, dan smartphone seken berkualitas. Terbaik, termurah, terpercaya!</p>
+      <div class="hero-btns">
+        <a href="#produk" class="btn-primary"><i class="fas fa-mobile-screen"></i> Lihat Produk</a>
+        <a href="#seken" class="btn-wa"><i class="fas fa-rotate-left"></i> Smartphone Seken</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="phone-mock">
+        <div class="notch"></div>
+        <div class="screen-logo">VZ</div>
+        <div class="screen-slogan">Terbaik • Termurah</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUK -->
+<section id="produk">
+  <div class="section-head">
+    <div>
+      <h2>Produk <span>Terbaru & Flagship</span></h2>
+      <p>Smartphone baru dari brand terkemuka & asesoris pilihan</p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="search-wrap">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Cari smartphone, asesoris... (auto-complete)" autocomplete="off">
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+    <div class="filter-group">
+      <label>Merek</label>
+      <select id="filterBrand">
+        <option value="">Semua Merek</option>
+        <option value="Oppo">Oppo</option>
+        <option value="Vivo">Vivo</option>
+        <option value="Realme">Realme</option>
+        <option value="Xiaomi">Xiaomi</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Infinix">Infinix</option>
+        <option value="Tecno">Tecno</option>
+        <option value="Itel">Itel</option>
+        <option value="Nubia">Nubia</option>
+        <option value="Advan">Advan</option>
+        <option value="Asesoris">Asesoris</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Rentang Harga</label>
+      <select id="filterPrice">
+        <option value="">Semua Harga</option>
+        <option value="0-2000000">&lt; Rp 2 Juta</option>
+        <option value="2000000-4000000">Rp 2 - 4 Juta</option>
+        <option value="4000000-7000000">Rp 4 - 7 Juta</option>
+        <option value="7000000-10000000">Rp 7 - 10 Juta</option>
+        <option value="10000000-999999999">&gt; Rp 10 Juta</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>RAM / ROM</label>
+      <select id="filterRam">
+        <option value="">Semua</option>
+        <option value="4/64">4/64 GB</option>
+        <option value="6/128">6/128 GB</option>
+        <option value="8/128">8/128 GB</option>
+        <option value="8/256">8/256 GB</option>
+        <option value="12/256">12/256 GB</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Garansi</label>
+      <select id="filterGaransi">
+        <option value="">Semua</option>
+        <option value="Resmi Indonesia">Resmi Indonesia</option>
+        <option value="Internasional">Internasional</option>
+      </select>
+    </div>
+    <button class="btn-filter" onclick="applyFilter()"><i class="fas fa-sliders"></i> Filter</button>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- PROMO / FLASH SALE -->
+<section id="promo">
+  <div class="promo-banner">
+    <div>
+      <h3><i class="fas fa-bolt"></i> FLASH SALE Hari Ini!</h3>
+      <p>Diskon hingga 40% untuk smartphone pilihan. Buruan sebelum kehabisan!</p>
+      <div class="countdown">
+        <div class="cd-box"><b id="cdH">08</b><span>Jam</span></div>
+        <div class="cd-box"><b id="cdM">45</b><span>Menit</span></div>
+        <div class="cd-box"><b id="cdS">30</b><span>Detik</span></div>
+      </div>
+    </div>
+    <a href="#produk" class="btn-primary" style="background:#fff;color:var(--accent);"><i class="fas fa-fire"></i> Belanja Sekarang</a>
+  </div>
+</section>
+
+<!-- SMARTPHONE SEKEN -->
+<section id="seken">
+  <div class="section-head">
+    <div>
+      <h2>Jual <span>Smartphone Seken</span> Terbaik</h2>
+      <p>All brand, murah, berkualitas. Lengkap dengan foto, harga, deskripsi & video</p>
+    </div>
+  </div>
+
+  <!-- FILTER KHUSUS SEKEN -->
+  <div class="filter-bar" style="grid-template-columns: 1fr 1fr 1fr 1fr; margin-bottom:20px;">
+    <div class="filter-group">
+      <label>Kelengkapan</label>
+      <select id="sekenKelengkapan">
+        <option value="">Semua</option>
+        <option value="Fullset">Fullset</option>
+        <option value="Batangan">Batangan</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Kesehatan Baterai</label>
+      <select id="sekenBaterai">
+        <option value="">Semua</option>
+        <option value="90">≥ 90%</option>
+        <option value="80">≥ 80%</option>
+        <option value="70">≥ 70%</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Kondisi Fisik</label>
+      <select id="sekenKondisi">
+        <option value="">Semua</option>
+        <option value="Mulus">Mulus</option>
+        <option value="Lecet Halus">Lecet Halus</option>
+        <option value="Minus">Minus</option>
+      </select>
+    </div>
+    <button class="btn-filter" onclick="filterSeken()"><i class="fas fa-filter"></i> Filter Seken</button>
+  </div>
+
+  <!-- FORM INPUT SEKEN -->
+  <div class="seken-panel">
+    <h4 style="font-size:16px;font-weight:700;margin-bottom:14px;"><i class="fas fa-plus-circle" style="color:var(--accent);"></i> Tambah Smartphone Seken</h4>
+    <form class="seken-form" onsubmit="event.preventDefault(); addSeken();">
+      <div>
+        <label>Nama Smartphone</label>
+        <input type="text" id="skNama" placeholder="Contoh: iPhone 13 Pro 256GB" required>
+      </div>
+      <div>
+        <label>Harga (Rp)</label>
+        <input type="number" id="skHarga" placeholder="Contoh: 8500000" required>
+      </div>
+      <div>
+        <label>Link Foto (URL)</label>
+        <input type="text" id="skFoto" placeholder="https://... (opsional)">
+      </div>
+      <div>
+        <label>Link Video (URL)</label>
+        <input type="text" id="skVideo" placeholder="https://... (opsional)">
+      </div>
+      <div>
+        <label>Kelengkapan</label>
+        <select id="skKelengkapan">
+          <option value="Fullset">Fullset</option>
+          <option value="Batangan">Batangan</option>
+        </select>
+      </div>
+      <div>
+        <label>Kesehatan Baterai (%)</label>
+        <input type="number" id="skBaterai" placeholder="Contoh: 90" min="1" max="100" required>
+      </div>
+      <div>
+        <label>Kondisi Fisik</label>
+        <select id="skKondisi">
+          <option value="Mulus">Mulus</option>
+          <option value="Lecet Halus">Lecet Halus</option>
+          <option value="Minus">Minus</option>
+        </select>
+      </div>
+      <div>
+        <label>Status Garansi</label>
+        <select id="skGaransi">
+          <option value="Resmi Indonesia">Resmi Indonesia</option>
+          <option value="Internasional">Internasional</option>
+          <option value="Tidak Ada">Tidak Ada</option>
+        </select>
+      </div>
+      <div class="full">
+        <label>Deskripsi Keterangan</label>
+        <textarea id="skDesc" placeholder="Contoh: Fullset, mulus, baterai sehat, garansi resmi..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Simpan Smartphone Seken</button>
+    </form>
+  </div>
+
+  <div class="seken-grid" id="sekenGrid"></div>
+</section>
+
+<!-- AKUN & TRANSAKSI -->
+<section id="akun">
+  <div class="section-head">
+    <div>
+      <h2>Akun & <span>Transaksi</span></h2>
+      <p>Keranjang, wishlist, dan akun Anda</p>
+    </div>
+  </div>
+  <div class="account-grid">
+    <div class="account-card">
+      <h4><i class="fas fa-shopping-cart"></i> Keranjang Belanja</h4>
+      <div id="cartList"><p style="font-size:13px;color:var(--muted);">Belum ada produk.</p></div>
+      <div class="cart-total"><span>Estimasi Total</span><span id="cartTotal">Rp 0</span></div>
+      <button class="btn-primary" style="margin-top:12px;" onclick="showToast('Lanjut ke checkout')"><i class="fas fa-credit-card"></i> Checkout</button>
+    </div>
+    <div class="account-card">
+      <h4><i class="fas fa-heart"></i> Wishlist</h4>
+      <p id="wishText">Belum ada produk favorit.</p>
+      <button class="btn-primary" onclick="showToast('Wishlist dibuka')"><i class="fas fa-eye"></i> Lihat Wishlist</button>
+    </div>
+    <div class="account-card">
+      <h4><i class="fas fa-user-circle"></i> Akun Saya</h4>
+      <p>Login / Register untuk riwayat pesanan, lacak resi, alamat, dan poin loyalitas.</p>
+      <div class="loyalty"><i class="fas fa-coins"></i> <div>Poin Loyalitas<br><b>1.250</b> poin</div></div>
+      <button class="btn-primary" style="margin-top:12px;" onclick="showToast('Halaman login/register')"><i class="fas fa-sign-in-alt"></i> Login / Register</button>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak">
+  <div class="contact-wrap">
+    <div>
+      <h2>Hubungi Kami</h2>
+      <p>Tim Vista Zone siap membantu Anda. Untuk pembelian smartphone seken, service, atau pertanyaan lainnya, hubungi kami via WhatsApp.</p>
+      <div class="contact-info">
+        <div><i class="fab fa-whatsapp"></i> <span>085267777779 (WhatsApp)</span></div>
+        <div><i class="fas fa-envelope"></i> <span>cs@vistazone.id</span></div>
+        <div><i class="fas fa-map-marker-alt"></i> <span>Indonesia</span></div>
+        <div><i class="fas fa-clock"></i> <span>Senin - Sabtu, 09.00 - 21.00 WIB</span></div>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <a href="https://wa.me/6285267777779?text=Halo%20Vista%20Zone,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Chat WhatsApp Sekarang</a>
+      <a href="https://wa.me/6285267777779?text=Halo%20Vista%20Zone,%20saya%20ingin%20service%20smartphone" target="_blank" class="btn-primary" style="justify-content:center;"><i class="fas fa-tools"></i> Service Smartphone</a>
+      <p style="font-size:12px;color:#94a3b8;text-align:center;margin-top:6px;">Pembelian smartphone seken & service juga melalui nomor yang sama.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo" style="color:#fff;">VISTA<span class="dot">.</span><span>ZONE</span></div>
+      <p>Terbaik, Termurah, Terpercaya. Pusat smartphone baru, seken, dan asesoris terlengkap di Indonesia.</p>
+    </div>
+    <div>
+      <h5>Menu</h5>
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#seken">Smartphone Seken</a>
+      <a href="#promo">Promo</a>
+    </div>
+    <div>
+      <h5>Bantuan</h5>
+      <a href="#kontak">Hubungi Kami</a>
+      <a href="#akun">Akun Saya</a>
+      <a href="#akun">Keranjang</a>
+      <a href="#akun">Wishlist</a>
+    </div>
+    <div>
+      <h5>Kontak</h5>
+      <a href="https://wa.me/6285267777779" target="_blank"><i class="fab fa-whatsapp"></i> 085267777779</a>
+      <a href="mailto:cs@vistazone.id"><i class="fas fa-envelope"></i> cs@vistazone.id</a>
+      <a href="#kontak"><i class="fas fa-map-marker-alt"></i> Indonesia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Vista Zone. Semua hak dilindungi.</div>
+</footer>
+
+<!-- MODAL DETAIL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-grid">
+      <div class="modal-visual" id="modalVisual"><i class="fas fa-mobile-screen"></i></div>
+      <div class="modal-body">
+        <div class="brand" id="modalBrand"></div>
+        <h3 id="modalName"></h3>
+        <div class="price" id="modalPrice"></div>
+        <div class="spec-list" id="modalSpecs"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-actions">
+          <a id="modalWa" href="#" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Pesan via WhatsApp</a>
+          <button class="btn-primary" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Keranjang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg"></span></div>
+
+<script>
+/* ============================================================
+   DATA PRODUK SMARTPHONE BARU & ASESORIS
+   Harga nasional / pasaran saat ini (estimasi)
+============================================================ */
+const products = [
+  // Oppo
+  { id:1, brand:'Oppo', name:'Oppo Find X8 Pro 12/256GB', price:14999000, srp:15999000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Flagship kamera Hasselblad, chip MediaTek Dimensity 9400, layar AMOLED 120Hz.', icon:'fa-mobile-screen', tag:'Flagship' },
+  { id:2, brand:'Oppo', name:'Oppo Reno 13 8/256GB', price:6999000, srp:7499000, ram:'8/256', garansi:'Resmi Indonesia', desc:'Desain premium, kamera 50MP, fast charging 80W, baterai 5600mAh.', icon:'fa-mobile-screen', tag:'Terbaru' },
+  { id:3, brand:'Oppo', name:'Oppo A3 Pro 8/128GB', price:2999000, srp:3299000, ram:'8/128', garansi:'Resmi Indonesia', desc:'HP tahan banting, baterai 5100mAh, kamera 50MP, layar 120Hz.', icon:'fa-mobile-screen', tag:'' },
+  // Vivo
+  { id:4, brand:'Vivo', name:'Vivo X200 Pro 12/256GB', price:13999000, srp:14999000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Kamera ZEISS 200MP, chip Dimensity 9400, layar LTPO AMOLED 120Hz.', icon:'fa-mobile-screen', tag:'Flagship' },
+  { id:5, brand:'Vivo', name:'Vivo V40 8/256GB', price:5999000, srp:6499000, ram:'8/256', garansi:'Resmi Indonesia', desc:'Kamera selfie 50MP, desain tipis, baterai 5500mAh, fast charging 80W.', icon:'fa-mobile-screen', tag:'Terbaru' },
+  { id:6, brand:'Vivo', name:'Vivo Y28 8/128GB', price:2499000, srp:2799000, ram:'8/128', garansi:'Resmi Indonesia', desc:'Baterai besar 6000mAh, layar 90Hz, kamera 50MP, harga terjangkau.', icon:'fa-mobile-screen', tag:'' },
+  // Realme
+  { id:7, brand:'Realme', name:'Realme GT 7 Pro 12/256GB', price:9999000, srp:10999000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Chip Snapdragon 8 Elite, layar AMOLED 120Hz, charging 120W.', icon:'fa-mobile-screen', tag:'Flagship' },
+  { id:8, brand:'Realme', name:'Realme 13 Pro+ 8/256GB', price:5499000, srp:5999000, ram:'8/256', garansi:'Resmi Indonesia', desc:'Kamera periskop 50MP, desain artistic, chip Snapdragon 7s Gen 3.', icon:'fa-mobile-screen', tag:'Terbaru' },
+  { id:9, brand:'Realme', name:'Realme C75 8/128GB', price:2199000, srp:2499000, ram:'8/128', garansi:'Resmi Indonesia', desc:'Baterai 6000mAh, tahan air IP64, layar 90Hz, kamera 50MP.', icon:'fa-mobile-screen', tag:'' },
+  // Xiaomi
+  { id:10, brand:'Xiaomi', name:'Xiaomi 15 Pro 12/256GB', price:12999000, srp:13999000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Chip Snapdragon 8 Elite, kamera Leica 50MP, layar LTPO 120Hz.', icon:'fa-mobile-screen', tag:'Flagship' },
+  { id:11, brand:'Xiaomi', name:'Xiaomi 14T 12/256GB', price:7999000, srp:8499000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Kamera Leica, chip Dimensity 8300 Ultra, layar AMOLED 144Hz.', icon:'fa-mobile-screen', tag:'Terbaru' },
+  { id:12, brand:'Xiaomi', name:'Redmi Note 14 Pro 8/256GB', price:3499000, srp:3799000, ram:'8/256', garansi:'Resmi Indonesia', desc:'Kamera 200MP, layar AMOLED 120Hz, baterai 5500mAh, IP68.', icon:'fa-mobile-screen', tag:'' },
+  // Samsung
+  { id:13, brand:'Samsung', name:'Samsung Galaxy S25 Ultra 12/256GB', price:19999000, srp:20999000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Flagship dengan S Pen, kamera 200MP, Snapdragon 8 Elite, AI canggih.', icon:'fa-mobile-screen', tag:'Flagship' },
+  { id:14, brand:'Samsung', name:'Samsung Galaxy A56 8/256GB', price:5999000, srp:6499000, ram:'8/256', garansi:'Resmi Indonesia', desc:'Layar Super AMOLED 120Hz, kamera 50MP OIS, baterai 5000mAh.', icon:'fa-mobile-screen', tag:'Terbaru' },
+  { id:15, brand:'Samsung', name:'Samsung Galaxy A16 8/128GB', price:2799000, srp:2999000, ram:'8/128', garansi:'Resmi Indonesia', desc:'Layar AMOLED, baterai 5000mAh, update OS 6 tahun, kamera 50MP.', icon:'fa-mobile-screen', tag:'' },
+  // Infinix
+  { id:16, brand:'Infinix', name:'Infinix Zero 40 12/256GB', price:4999000, srp:5499000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Kamera 108MP OIS, layar AMOLED 144Hz, chip Dimensity 8200 Ultimate.', icon:'fa-mobile-screen', tag:'Terbaru' },
+  { id:17, brand:'Infinix', name:'Infinix Note 50 Pro 8/256GB', price:2999000, srp:3299000, ram:'8/256', garansi:'Resmi Indonesia', desc:'Baterai 6000mAh, charging 45W, layar AMOLED 120Hz, kamera 50MP.', icon:'fa-mobile-screen', tag:'' },
+  // Tecno
+  { id:18, brand:'Tecno', name:'Tecno Camon 30 Pro 12/256GB', price:4499000, srp:4999000, ram:'12/256', garansi:'Resmi Indonesia', desc:'Kamera Sony 50MP, desain premium, chip Dimensity 8200, layar 120Hz.', icon:'fa-mobile-screen', tag:'Terbaru' },
+  { id:19, brand:'Tecno', name:'Tecno Spark 30 Pro 8/128GB', price:1999000, srp:2299000, ram:'8/128', garansi:'Resmi Indonesia', desc:'Layar AMOLED 120Hz, kamera 64MP, baterai 5000mAh, harga murah.', icon:'fa-mobile-screen', tag:'' },
+  // Itel
+  { id:20, brand:'Itel', name:'Itel S25 8/128GB', price:1499000, srp:1699000, ram:'8/128', garansi:'Resmi Indonesia', desc:'Layar AMOLED, kamera 50MP, baterai 5000mAh, harga sangat terjangkau.', icon:'fa-mobile-screen', tag:'' },
+  { id:21, brand:'Itel', name:'Itel P65 8/128GB', price:1299000, srp:1499000, ram:'8/128', garansi:'Resmi Indonesia', desc:'Baterai jumbo 5000mAh, layar 120Hz, kamera 50MP, fast charging.', icon:'fa-mobile-screen', tag:'' },
+  // Nubia
+  { id:22, brand:'Nubia', name:'Nubia Z60 Ultra 12/256GB', price:10999000, srp:11999000, ram:'12/256', garansi:'Internasional', desc:'Kamera under-display, Snapdragon 8 Gen 3, layar AMOLED 120Hz.', icon:'fa-mobile-screen', tag:'Flagship' },
+  { id:23, brand:'Nubia', name:'Nubia Neo 3 8/256GB', price:3499000, srp:3799000, ram:'8/256', garansi:'Resmi Indonesia', desc:'Desain gaming, chip Unisoc T820, layar 120Hz, baterai 5000mAh.', icon:'fa-mobile-screen', tag:'' },
+  // Advan
+  { id:24, brand:'Advan', name:'Advan G9 8/128GB', price:1799000, srp:1999000, ram:'8/128', garansi:'Resmi Indonesia', desc:'Smartphone lokal, layar 6.6 inci, baterai 5000mAh, kamera 50MP.', icon:'fa-mobile-screen', tag:'' },
+  { id:25, brand:'Advan', name:'Advan X7 6/128GB', price:1399000, srp:1599000, ram:'6/128', garansi:'Resmi Indonesia', desc:'Harga ekonomis, baterai 5000mAh, layar 6.5 inci, kamera 13MP.', icon:'fa-mobile-screen', tag:'' },
+  // ASESORIS
+  { id:26, brand:'Asesoris', name:'Memory Card 128GB', price:185000, srp:220000, ram:'-', garansi:'Resmi Indonesia', desc:'MicroSD 128GB Class 10 U3, kecepatan baca hingga 100MB/s.', icon:'fa-sd-card', tag:'Asesoris' },
+  { id:27, brand:'Asesoris', name:'Showcase HP Anti Air', price:75000, srp:95000, ram:'-', garansi:'-', desc:'Case pelindung transparan, anti air dan debu, cocok untuk semua HP.', icon:'fa-mobile-screen-button', tag:'Asesoris' },
+  { id:28, brand:'Asesoris', name:'Headset Bluetooth TWS', price:249000, srp:299000, ram:'-', garansi:'Resmi Indonesia', desc:'TWS bluetooth 5.3, bass mantap, baterai 24 jam, cocok untuk musik.', icon:'fa-headphones', tag:'Asesoris' },
+  { id:29, brand:'Asesoris', name:'Tempered Glass Anti Gores', price:45000, srp:60000, ram:'-', garansi:'-', desc:'Anti gores 9H, full cover, anti blue light, melindungi layar HP.', icon:'fa-shield-halved', tag:'Asesoris' },
+  { id:30, brand:'Asesoris', name:'Adaptor Charging 33W', price:129000, srp:159000, ram:'-', garansi:'Resmi Indonesia', desc:'Adaptor fast charging 33W, USB Type-C, original, aman untuk HP.', icon:'fa-plug', tag:'Asesoris' },
+  { id:31, brand:'Asesoris', name:'Flashdisk 64GB USB 3.0', price:95000, srp:120000, ram:'-', garansi:'Resmi Indonesia', desc:'Flashdisk 64GB USB 3.0, transfer cepat, desain metal premium.', icon:'fa-usb', tag:'Asesoris' }
+];
+
+/* ============================================================
+   DATA SMARTPHONE SEKEN (default)
+============================================================ */
+let sekenData = [
+  { id:101, nama:'iPhone 13 Pro 256GB', harga:8500000, foto:'', video:'', kelengkapan:'Fullset', baterai:89, kondisi:'Mulus', garansi:'Resmi Indonesia', desc:'Fullset, mulus, baterai 89%, garansi resmi, semua fungsi normal.', icon:'fa-mobile-screen', brand:'Apple' },
+  { id:102, nama:'Samsung Galaxy S23 8/256GB', harga:6500000, foto:'', video:'', kelengkapan:'Fullset', baterai:85, kondisi:'Mulus', garansi:'Resmi Indonesia', desc:'Fullset, mulus, baterai 85%, garansi resmi, kamera jernih.', icon:'fa-mobile-screen', brand:'Samsung' },
+  { id:103, nama:'Xiaomi 13 12/256GB', harga:5200000, foto:'', video:'', kelengkapan:'Batangan', baterai:78, kondisi:'Lecet Halus', garansi:'Internasional', desc:'Batangan, lecet halus, baterai 78%, performa masih kencang.', icon:'fa-mobile-screen', brand:'Xiaomi' },
+  { id:104, nama:'Oppo Reno 8 8/256GB', harga:3200000, foto:'', video:'', kelengkapan:'Fullset', baterai:92, kondisi:'Mulus', garansi:'Resmi Indonesia', desc:'Fullset, mulus, baterai 92%, garansi resmi, seperti baru.', icon:'fa-mobile-screen', brand:'Oppo' }
+];
+
+/* ============================================================
+   STATE
+============================================================ */
+let cart = [];
+let wishlist = [];
+let currentProduct = null;
+
+/* ============================================================
+   RENDER PRODUK
+============================================================ */
+function formatRupiah(n) { return 'Rp ' + n.toLocaleString('id-ID'); }
+
+function renderProducts(list) {
+  const grid = document.getElementById('productGrid');
+  if (!list.length) { grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;">Tidak ada produk yang cocok.</p>'; return; }
+  grid.innerHTML = list.map(p => `
+    <div class="product-card">
+      <div class="product-img">
+        ${p.tag ? `<span class="product-tag ${p.tag==='Flagship'?'':''}">${p.tag}</span>` : ''}
+        <button class="wish-btn" onclick="toggleWish(${p.id}, this)"><i class="fa${wishlist.includes(p.id)?'s':'r'} fa-heart"></i></button>
+        <i class="fas ${p.icon}"></i>
+      </div>
+      <div class="product-body">
+        <div class="product-brand">${p.brand}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc.length > 60 ? p.desc.slice(0,60)+'...' : p.desc}</div>
+        <div class="product-price">${formatRupiah(p.price)} ${p.srp>p.price?`<small>${formatRupiah(p.srp)}</small>`:''}</div>
+        <div class="product-actions">
+          <button class="btn-detail" onclick="openDetail(${p.id})"><i class="fas fa-eye"></i> Lihat Detail</button>
+          <a class="btn-icon-wa" href="https://wa.me/6285267777779?text=${encodeURIComponent('Halo Vista Zone, saya tertarik dengan '+p.name+' seharga '+formatRupiah(p.price))}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ============================================================
+   FILTER PRODUK
+============================================================ */
+function applyFilter() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const brand = document.getElementById('filterBrand').value;
+  const price = document.getElementById('filterPrice').value;
+  const ram = document.getElementById('filterRam').value;
+  const garansi = document.getElementById('filterGaransi').value;
+
+  let filtered = products.filter(p => {
+    if (q && !(p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q))) return false;
+    if (brand && p.brand !== brand) return false;
+    if (ram && p.ram !== ram) return false;
+    if (garansi && p.garansi !== garansi) return false;
+    if (price) {
+      const [min,max] = price.split('-').map(Number);
+      if (p.price < min || p.price > max) return false;
+    }
+    return true;
+  });
+  renderProducts(filtered);
+}
+
+/* ============================================================
+   SEARCH AUTOCOMPLETE
+============================================================ */
+const searchInput = document.getElementById('searchInput');
+const suggestionsBox = document.getElementById('suggestions');
+searchInput.addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if (!q) { suggestionsBox.classList.remove('show'); return; }
+  const matches = products.filter(p => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q)).slice(0,8);
+  if (!matches.length) { suggestionsBox.classList.remove('show'); return; }
+  suggestionsBox.innerHTML = matches.map(p => `<div onclick="selectSuggestion('${p.name.replace(/'/g,"\\'")}')"><i class="fas fa-search"></i> ${p.name} <span style="margin-left:auto;font-size:11px;color:var(--muted);">${p.brand}</span></div>`).join('');
+  suggestionsBox.classList.add('show');
+});
+function selectSuggestion(name) {
+  searchInput.value = name;
+  suggestionsBox.classList.remove('show');
+  applyFilter();
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-wrap')) suggestionsBox.classList.remove('show');
+});
+
+/* ============================================================
+   DETAIL MODAL
+============================================================ */
+function openDetail(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  currentProduct = p;
+  document.getElementById('modalBrand').textContent = p.brand;
+  document.getElementById('modalName').textContent = p.name;
+  document.getElementById('modalPrice').innerHTML = formatRupiah(p.price) + (p.srp>p.price?` <small style="font-size:14px;color:var(--muted);text-decoration:line-through;">${formatRupiah(p.srp)}</small>`:'');
+  document.getElementById('modalDesc').textContent = p.desc;
+  document.getElementById('modalVisual').innerHTML = `<i class="fas ${p.icon}"></i>`;
+  document.getElementById('modalSpecs').innerHTML = `
+    <div><span>RAM / ROM</span><span>${p.ram}</span></div>
+    <div><span>Garansi</span><span>${p.garansi}</span></div>
+    <div><span>Kategori</span><span>${p.tag || 'Smartphone'}</span></div>
+    <div><span>Harga SRP</span><span>${formatRupiah(p.srp)}</span></div>
+  `;
+  document.getElementById('modalWa').href = `https://wa.me/6285267777779?text=${encodeURIComponent('Halo Vista Zone, saya ingin memesan '+p.name+' seharga '+formatRupiah(p.price))}`;
+  document.getElementById('modalOverlay').classList.add('show');
+}
+function closeModal() { document.getElementById('modalOverlay').classList.remove('show'); }
+document.getElementById('modalOverlay').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+
+/* ============================================================
+   WISHLIST & CART
+============================================================ */
+function toggleWish(id, btn) {
+  const idx = wishlist.indexOf(id);
+  if (idx > -1) { wishlist.splice(idx,1); btn.querySelector('i').className='far fa-heart'; btn.classList.remove('active'); showToast('Dihapus dari wishlist'); }
+  else { wishlist.push(id); btn.querySelector('i').className='fas fa-heart'; btn.classList.add('active'); showToast('Ditambahkan ke wishlist'); }
+  document.getElementById('wishBadge').textContent = wishlist.length;
+  document.getElementById('wishText').textContent = wishlist.length ? wishlist.length + ' produk dalam wishlist.' : 'Belum ada produk favorit.';
+}
+function addToCart() {
+  if (!currentProduct) return;
+  cart.push(currentProduct);
+  document.getElementById('cartBadge').textContent = cart.length;
+  renderCart();
+  closeModal();
+  showToast(currentProduct.name + ' ditambahkan ke keranjang');
+}
+function renderCart() {
+  const list = document.getElementById('cartList');
+  if (!cart.length) { list.innerHTML = '<p style="font-size:13px;color:var(--muted);">Belum ada produk.</p>'; document.getElementById('cartTotal').textContent='Rp 0'; return; }
+  let total = 0;
+  list.innerHTML = cart.map(p => { total += p.price; return `<div class="cart-item"><span>${p.name}</span><span>${formatRupiah(p.price)}</span></div>`; }).join('');
+  document.getElementById('cartTotal').textContent = formatRupiah(total);
+}
+function scrollToAkun() { document.getElementById('akun').scrollIntoView({behavior:'smooth'}); }
+
+/* ============================================================
+   SEKEN: RENDER, TAMBAH, FILTER
+============================================================ */
+function renderSeken(list) {
+  const grid = document.getElementById('sekenGrid');
+  if (!list.length) { grid.innerHTML = '<p style="text-align:center;color:var(--muted);padding:30px;">Tidak ada smartphone seken.</p>'; return; }
+  grid.innerHTML = list.map(s => `
+    <div class="seken-card">
+      <div class="seken-media">
+        <i class="fas ${s.icon||'fa-mobile-screen'}"></i>
+        ${s.video ? '<span class="video-badge"><i class="fas fa-play"></i> Video tersedia</span>' : ''}
+      </div>
+      <div class="seken-body">
+        <h4>${s.nama}</h4>
+        <div class="seken-meta">
+          <span class="chip">${s.kelengkapan}</span>
+          <span class="chip ${s.baterai>=85?'ok':s.baterai>=75?'warn':''}">Baterai ${s.baterai}%</span>
+          <span class="chip">${s.kondisi}</span>
+          <span class="chip">${s.garansi}</span>
+        </div>
+        <div class="seken-price">${formatRupiah(s.harga)}</div>
+        <div class="seken-desc">${s.desc}</div>
+        <div class="product-actions">
+          <a class="btn-detail" href="${s.video||'#'}" target="_blank" onclick="${s.video?'':'showToast(\'Video belum tersedia\');return false;'}"><i class="fas fa-play"></i> Lihat Video</a>
+          <a class="btn-icon-wa" href="https://wa.me/6285267777779?text=${encodeURIComponent('Halo Vista Zone, saya tertarik dengan smartphone seken '+s.nama+' seharga '+formatRupiah(s.harga))}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+function addSeken() {
+  const nama = document.getElementById('skNama').value.trim();
+  const harga = parseInt(document.getElementById('skHarga').value);
+  const foto = document.getElementById('skFoto').value.trim();
+  const video = document.getElementById('skVideo').value.trim();
+  const kelengkapan = document.getElementById('skKelengkapan').value;
+  const baterai = parseInt(document.getElementById('skBaterai').value);
+  const kondisi = document.getElementById('skKondisi').value;
+  const garansi = document.getElementById('skGaransi').value;
+  const desc = document.getElementById('skDesc').value.trim();
+  if (!nama || !harga || !desc) { showToast('Nama, harga, dan deskripsi wajib diisi!'); return; }
+  const newItem = { id: Date.now(), nama, harga, foto, video, kelengkapan, baterai, kondisi, garansi, desc, icon:'fa-mobile-screen', brand:'Seken' };
+  sekenData.unshift(newItem);
+  renderSeken(sekenData);
+  document.getElementById('skNama').value='';
+  document.getElementById('skHarga').value='';
+  document.getElementById('skFoto').value='';
+  document.getElementById('skVideo').value='';
+  document.getElementById('skDesc').value='';
+  showToast('Smartphone seken berhasil ditambahkan!');
+}
+function filterSeken() {
+  const kel = document.getElementById('sekenKelengkapan').value;
+  const bat = parseInt(document.getElementById('sekenBaterai').value) || 0;
+  const kon = document.getElementById('sekenKondisi').value;
+  const filtered = sekenData.filter(s => {
+    if (kel && s.kelengkapan !== kel) return false;
+    if (bat && s.baterai < bat) return false;
+    if (kon && s.kondisi !== kon) return false;
+    return true;
+  });
+  renderSeken(filtered);
+}
+
+/* ============================================================
+   TOAST
+============================================================ */
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ============================================================
+   COUNTDOWN FLASH SALE
+============================================================ */
+let cdH = 8, cdM = 45, cdS = 30;
+setInterval(() => {
+  cdS--;
+  if (cdS < 0) { cdS = 59; cdM--; }
+  if (cdM < 0) { cdM = 59; cdH--; }
+  if (cdH < 0) { cdH = 23; cdM = 59; cdS = 59; }
+  document.getElementById('cdH').textContent = String(cdH).padStart(2,'0');
+  document.getElementById('cdM').textContent = String(cdM).padStart(2,'0');
+  document.getElementById('cdS').textContent = String(cdS).padStart(2,'0');
+}, 1000);
+
+/* ============================================================
+   NAV ACTIVE STATE
+============================================================ */
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', function() {
+    document.querySelectorAll('nav a').forEach(x => x.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+/* ============================================================
+   INIT
+============================================================ */
+renderProducts(products);
+renderSeken(sekenData);
+renderCart();
+</script>
+</body>
+</html>
